@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/abhayalibre/v14/e3tmeuGtX-Co5MNzeAOqinEQfEnXgPRE4g.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+body {
+    background-color : black; 
+    color : white;
+    font-size : 1.5em;
+    font-family: 'Abhaya Libre', 'Times New Roman', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #16425b;
+    color: white; 
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+h1 {
+    margin-left: 2em;
+    margin-right: 2em;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+h2 {
+    margin: 1em;
+    padding: 0;
+}
+main {
+    margin: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+label {
+    cursor: pointer;
+}
+
+#weather-widget-container {
+    display: flex;
+}
+.weather-widget {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+    flex: 4;
+    background-color : white; 
+    color : black;
+}
+.weather-icon {
+    width: 3em;
+    height: 3em;
+}
+.weather-date {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#weather-widget-location {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+@media (max-width: 767px) {
+    #weather-widget-container {
+        display: block;
+    }
+}
+
+#locationSelector {
+    font-family: 'Abhaya Libre', 'Times New Roman', Arial, sans-serif;
+    margin: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 0.5em;
+    font-size: 0.75em;
+}
+#locationSelector:hover {
+    border-color: #5e8b62;
+    cursor: pointer;
+}
+#locationSelector:focus {
+    outline: none;
+    border-color: #5e8b62;
+}
+footer {
+    background-color: #16425b;
+    color: white; 
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+footer p {
+    margin-left: 2em;
+    margin-right: 2em;
+    color: white;
+    font-size: 1em;
+    text-align: center;
+}
+.footer-design {
+    animation: colorChange 8s infinite alternate;
+}
+@keyframes colorChange {
+    0% {
+        color: white;
+    }
+    25% {
+        color: #ADD8E6; /* Light Blue */
+    }
+    50% {
+        color: #87CEEB; /* Sky Blue */
+    }
+    75% {
+        color: #4682B4; /* Steel Blue */
+    }
+    100% {
+        color: white;
+    }
+}
+
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 500em;
+    height: 18em;
+    background: url(clouds.png) repeat-x;
+    animation: moveClouds 140s linear infinite;
+    /*z-index: -1; /* Ensure the clouds are behind other content */
+}
+@keyframes moveClouds {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.chat-container {
+    margin: 0.5em auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.chat-box {
+    height: 10em;
+    width: 20em;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+}  
+input[type="text"] {
+    width: 70%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+} 
+button {
+    padding: 5px 10px;
+    background-color: #16425b;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.message {
+    color: black;
+    margin-bottom: 10px;
+}
+.user {
+    text-align: right;
+}
+.bot {
+    text-align: left;
+}
+@media (max-width: 767px) {
+    .chat-box {
+        width: 100%;
+    }
+    input[type="text"] {
+        width: 60%;
+    }
+} 
