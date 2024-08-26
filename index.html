@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Weather Information.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weather</title>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    </head>
+    <body>
+        <header>
+            <h1>What Should I Wear?</h1>
+        </header>
+        <main>
+            <div class="clouds"></div>
+            <h2>Find the 5-day Forecast for your Location</h2>
+            <noscript>
+                <p>Current Weather Conditions Unavailable.</p>
+            </noscript>
+            <select id="locationSelector" style="display: none;">
+                <option value="LaJolla">La Jolla, CA</option>
+                <option value="Irvine">Irvine, CA</option>
+                <option value="NewYorkCity">New York City, NY</option>
+                <option value="Austin">Austin, TX</option>
+                <option value="Miami">Miami, FL</option>
+            </select>
+            <div id="weather-widget-location"></div>
+            <div id="weather-widget-container"></div>
+            <script src="weatherScript.js"></script>
+            <h2>Get Outfit Reccomendations</h2>
+            <p>Say Hi to the ChatBot!</p>
+            <div class="chat-container">
+                <div class="chat-box" id="chat-box"></div>
+                <input type="text" id="user-input" placeholder="Type here...">
+                <button onclick="sendMessage()">Send</button>
+              </div>
+              <script src="chatbot.js"></script>
+              <p>Hint: sunny, rainy, windy, cloudy, snowy</p>
+        </main>
+        <script src="//code.tidio.co/ww3v3uyxpllndrwqfhko095jlpx49b3a.js" async></script>
+    </body>
+    <footer>
+        <p class="footer-design">Made with &hearts; by WIC Tech Dev Chairs</p>
+    </footer>
+</html>
